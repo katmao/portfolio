@@ -7,17 +7,17 @@ const focusItems = [...focusTopics, 'AI social implications'];
 const Hero = () => (
   <section id="top" aria-labelledby="hero-heading" className="px-6">
     <div className="mx-auto flex max-w-proseWide flex-col gap-12 pt-8 sm:gap-16 sm:pt-12 lg:flex-row lg:items-start">
-      <div className="flex-1 space-y-8">
+      <div className="flex-1 space-y-8 lg:flex lg:flex-col lg:justify-between lg:min-h-[600px]">
         <h1
           id="hero-heading"
           className="text-5xl font-medium leading-tight text-primary sm:text-6xl animate-fade-in"
         >
           Ekaterina Novozhilova
         </h1>
-        <div className="text-xl text-slateInk/70 leading-relaxed space-y-1 animate-fade-in animate-delay-100">
-          <p>Ph.D. Candidate</p>
-          <p>Emerging Media Studies Division</p>
-          <p>College of Communication</p>
+        <div className="text-xl text-slateInk/70 leading-none animate-fade-in animate-delay-100">
+          <p className="-mb-1">Ph.D. Candidate</p>
+          <p className="-mb-1">Emerging Media Studies Division</p>
+          <p className="-mb-1">College of Communication</p>
           <p>Boston University</p>
         </div>
         <div className="text-lg text-slateInk/75 space-y-6 leading-relaxed animate-fade-in animate-delay-200">
@@ -62,7 +62,7 @@ const Hero = () => (
           </a>
         </div>
       </div>
-      <aside className="flex w-full max-w-md flex-col gap-6 border-t border-slate-200 pt-8 lg:sticky lg:top-32 lg:w-80 lg:border-none lg:pt-0">
+      <aside className="flex w-full max-w-md flex-col gap-6 border-t border-slate-200 pt-8 lg:sticky lg:top-32 lg:w-80 lg:border-none lg:pt-0 lg:min-h-[600px] lg:justify-start">
         <figure className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm animate-fade-in animate-delay-200 transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
           <img
             src="/images/1Q0A7791.jpeg"

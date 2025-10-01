@@ -103,12 +103,24 @@ const ResearchPage = () => (
             idx === 0 ? '' : idx === 1 ? 'animate-delay-200' : 'animate-delay-400'
           }`}
         >
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.75fr)_1fr] lg:items-start">
-            <img src={area.imageSrc} alt={area.imageAlt} className="h-full w-full rounded object-cover transition-transform duration-500 hover:scale-105" />
-            <div className="space-y-5">
-              <h2 className="text-3xl font-medium text-primary leading-tight">{area.title}</h2>
-              <p className="text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
-            </div>
+          <div className={`grid gap-6 lg:items-start ${idx === 1 ? 'lg:grid-cols-[1fr_auto]' : 'lg:grid-cols-[auto_1fr]'}`}>
+            {idx === 1 ? (
+              <>
+                <div className="space-y-5">
+                  <h2 className="text-3xl font-medium text-primary leading-tight">{area.title}</h2>
+                  <p className="text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
+                </div>
+                <img src={area.imageSrc} alt={area.imageAlt} className="h-48 w-48 rounded object-cover transition-transform duration-500 hover:scale-105" />
+              </>
+            ) : (
+              <>
+                <img src={area.imageSrc} alt={area.imageAlt} className="h-48 w-48 rounded object-cover transition-transform duration-500 hover:scale-105" />
+                <div className="space-y-5">
+                  <h2 className="text-3xl font-medium text-primary leading-tight">{area.title}</h2>
+                  <p className="text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
+                </div>
+              </>
+            )}
           </div>
           <div className="border-t border-slate-200 pt-6">
             <h3 className="text-sm font-medium uppercase tracking-widest text-slateInk/50">Selected Works</h3>

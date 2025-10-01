@@ -1,4 +1,4 @@
-const CV_PATH = '/documents/ekaterina-novozhilova-cv.pdf';
+const CV_PATH = 'https://drive.google.com/file/d/1jtWmq-W_Lzm-GfHm7tbBCn16wyNZlYcs/view?usp=sharing';
 
 const CvPage = () => (
   <div className="px-6">
