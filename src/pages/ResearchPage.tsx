@@ -96,13 +96,15 @@ const researchAreas: ResearchArea[] = [
 const ResearchPage = () => (
   <div className="px-6">
     <div className="mx-auto max-w-proseWide py-20 space-y-16">
-      {researchAreas.map((area) => (
+      {researchAreas.map((area, idx) => (
         <article
           key={area.title}
-          className="space-y-6 rounded-lg border border-slate-200 bg-white px-8 py-8 shadow-sm"
+          className={`space-y-6 rounded-lg border border-slate-200 bg-white px-8 py-8 shadow-sm animate-fade-in-slow transition-all duration-500 hover:shadow-lg hover:scale-[1.01] hover:border-slate-300 ${
+            idx === 0 ? '' : idx === 1 ? 'animate-delay-200' : 'animate-delay-400'
+          }`}
         >
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.75fr)_1fr] lg:items-start">
-            <img src={area.imageSrc} alt={area.imageAlt} className="h-full w-full rounded object-cover" />
+            <img src={area.imageSrc} alt={area.imageAlt} className="h-full w-full rounded object-cover transition-transform duration-500 hover:scale-105" />
             <div className="space-y-5">
               <h2 className="text-3xl font-medium text-primary leading-tight">{area.title}</h2>
               <p className="text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
@@ -118,7 +120,7 @@ const ResearchPage = () => (
                       href={work.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slateInk/75 hover:text-primary transition-colors"
+                      className="text-slateInk/75 hover:text-primary transition-all duration-300 hover:underline"
                     >
                       {work.content}
                     </a>

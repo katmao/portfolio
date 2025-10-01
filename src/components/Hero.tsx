@@ -10,17 +10,17 @@ const Hero = () => (
       <div className="flex-1 space-y-8">
         <h1
           id="hero-heading"
-          className="text-5xl font-medium leading-tight text-primary sm:text-6xl"
+          className="text-5xl font-medium leading-tight text-primary sm:text-6xl animate-fade-in"
         >
           Ekaterina Novozhilova
         </h1>
-        <div className="text-xl text-slateInk/70 leading-relaxed space-y-1">
+        <div className="text-xl text-slateInk/70 leading-relaxed space-y-1 animate-fade-in animate-delay-100">
           <p>Ph.D. Candidate</p>
           <p>Emerging Media Studies Division</p>
           <p>College of Communication</p>
           <p>Boston University</p>
         </div>
-        <div className="text-lg text-slateInk/75 space-y-6 leading-relaxed">
+        <div className="text-lg text-slateInk/75 space-y-6 leading-relaxed animate-fade-in animate-delay-200">
           <p>
             I am Ekaterina (Katya) Novozhilova, a Ph.D. Candidate in the Division of Emerging Media
             Studies at Boston University's College of Communication (expected graduation July 2026).
@@ -38,14 +38,14 @@ const Hero = () => (
             design and governance of AI systems for human wellbeing.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-4 text-base text-slateInk/60 border-t border-slate-200 pt-6">
-          <a href={`mailto:${contact.email}`} className="font-medium text-primary hover:text-slateInk transition-colors">
+        <div className="flex flex-wrap items-center gap-4 text-base text-slateInk/60 border-t border-slate-200 pt-6 animate-fade-in animate-delay-300">
+          <a href={`mailto:${contact.email}`} className="font-medium text-primary hover:text-slateInk transition-all duration-300 hover:scale-105">
             ekaterin [at] bu.edu
           </a>
           <span aria-hidden="true">•</span>
           <a
             href="https://scholar.google.com/citations?user=1U4PF-AAAAAJ&hl=en&oi=ao"
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-all duration-300 hover:scale-105"
             target="_blank"
             rel="noreferrer"
           >
@@ -54,7 +54,7 @@ const Hero = () => (
           <span aria-hidden="true">•</span>
           <a
             href="https://www.linkedin.com/in/ekaterina-novozhilova/"
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary transition-all duration-300 hover:scale-105"
             target="_blank"
             rel="noreferrer"
           >
@@ -63,7 +63,7 @@ const Hero = () => (
         </div>
       </div>
       <aside className="flex w-full max-w-md flex-col gap-6 border-t border-slate-200 pt-8 lg:sticky lg:top-32 lg:w-80 lg:border-none lg:pt-0">
-        <figure className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm">
+        <figure className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm animate-fade-in animate-delay-200 transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
           <img
             src="/images/1Q0A7791.jpeg"
             alt="Portrait of Ekaterina Novozhilova"
@@ -71,7 +71,7 @@ const Hero = () => (
           />
         </figure>
         <div className="grid gap-5">
-          <div className="rounded-lg border border-slate-200 bg-white px-6 py-5 shadow-sm">
+          <div className="rounded-lg border border-slate-200 bg-white px-6 py-5 shadow-sm animate-fade-in animate-delay-300 transition-all duration-300 hover:shadow-md hover:border-slate-300">
             <h2 className="text-sm uppercase tracking-widest text-slateInk/50 font-medium">Research Focus</h2>
             <ul className="mt-4 list-disc space-y-2.5 pl-5 text-base text-slateInk/75 marker:text-slateInk/40">
               {focusItems.map((item) => (
@@ -79,7 +79,7 @@ const Hero = () => (
               ))}
             </ul>
           </div>
-          <div className="rounded-lg border border-slate-200 bg-white px-6 py-5 shadow-sm">
+          <div className="rounded-lg border border-slate-200 bg-white px-6 py-5 shadow-sm animate-fade-in animate-delay-400 transition-all duration-300 hover:shadow-md hover:border-slate-300">
             <h2 className="text-sm uppercase tracking-widest text-slateInk/50 font-medium">Methods</h2>
             <ul className="mt-4 list-disc space-y-2.5 pl-5 text-base text-slateInk/75 marker:text-slateInk/40">
               {methodHighlights.map((item) => (
