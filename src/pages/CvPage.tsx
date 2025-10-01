@@ -3,16 +3,16 @@ const CV_PATH = '/documents/ekaterina-novozhilova-cv.pdf';
 const CvPage = () => (
   <div className="px-6">
     <div className="mx-auto max-w-proseWide py-24">
-      <h1 className="text-3xl font-semibold text-primary">Curriculum Vitae</h1>
-      <p className="mt-4 text-base text-slateInk/80">
+      <h1 className="text-4xl font-medium text-primary">Curriculum Vitae</h1>
+      <p className="mt-6 text-lg text-slateInk/75 leading-relaxed">
         Download and review the current version of my CV using the link below.
       </p>
-      <div className="mt-8">
+      <div className="mt-10">
         <a
           href={CV_PATH}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:bg-primary/80"
+          className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-8 py-4 text-base font-medium text-primary shadow-sm transition hover:border-primary hover:shadow-md"
         >
           Ekaterina Novozhilova CV
         </a>

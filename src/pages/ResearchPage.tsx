@@ -95,22 +95,22 @@ const researchAreas: ResearchArea[] = [
 
 const ResearchPage = () => (
   <div className="px-6">
-    <div className="mx-auto max-w-proseWide py-20 space-y-12">
+    <div className="mx-auto max-w-proseWide py-20 space-y-16">
       {researchAreas.map((area) => (
         <article
           key={area.title}
-          className="space-y-4 rounded-2xl border border-slate-200/80 bg-soft px-6 py-6 shadow-subtle"
+          className="space-y-6 rounded-lg border border-slate-200 bg-white px-8 py-8 shadow-sm"
         >
-          <div className="grid gap-4 lg:grid-cols-[minmax(0,0.75fr)_1fr] lg:items-start">
-            <img src={area.imageSrc} alt={area.imageAlt} className="h-full w-full rounded-2xl object-cover" />
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-primary">{area.title}</h2>
-              <p className="text-base text-slateInk/80">{area.description}</p>
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.75fr)_1fr] lg:items-start">
+            <img src={area.imageSrc} alt={area.imageAlt} className="h-full w-full rounded object-cover" />
+            <div className="space-y-5">
+              <h2 className="text-3xl font-medium text-primary leading-tight">{area.title}</h2>
+              <p className="text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
             </div>
           </div>
-          <div>
-            <h3 className="text-sm font-medium uppercase tracking-[0.35em] text-slateInk/60">Selected Works</h3>
-            <ul className="mt-2 list-disc space-y-2 pl-5 text-sm text-slateInk/80">
+          <div className="border-t border-slate-200 pt-6">
+            <h3 className="text-sm font-medium uppercase tracking-widest text-slateInk/50">Selected Works</h3>
+            <ul className="mt-4 list-disc space-y-3 pl-5 text-base text-slateInk/75 leading-relaxed">
               {area.works.map((work, index) => (
                 <li key={index}>
                   {work.href ? (
@@ -118,7 +118,7 @@ const ResearchPage = () => (
                       href={work.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slateInk/80 hover:text-primary hover:underline"
+                      className="text-slateInk/75 hover:text-primary transition-colors"
                     >
                       {work.content}
                     </a>

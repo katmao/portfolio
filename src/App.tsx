@@ -7,7 +7,7 @@ import ResearchPage from '@/pages/ResearchPage.tsx';
 import TeachingPage from '@/pages/TeachingPage.tsx';
 
 const App = () => (
-  <div className="min-h-screen bg-[#f9fafc] text-primary">
+  <div className="min-h-screen bg-white text-primary">
     <Navbar />
     <main className="pt-20">
       <Routes>
