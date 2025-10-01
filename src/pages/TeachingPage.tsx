@@ -70,18 +70,18 @@ const sections = [
 
 const TeachingPage = () => (
   <div className="px-6">
-    <div className="mx-auto max-w-proseWide py-20 space-y-10">
-      {sections.map((section) => (
-        <section key={section.heading} className="space-y-4">
-          <h2 className="text-xl font-semibold text-primary">{section.heading}</h2>
-          <div className="space-y-4">
+    <div className="mx-auto max-w-proseWide py-20 space-y-12">
+      {sections.map((section, sectionIdx) => (
+        <section key={section.heading} className={`space-y-6 animate-fade-in ${sectionIdx === 0 ? '' : sectionIdx === 1 ? 'animate-delay-100' : sectionIdx === 2 ? 'animate-delay-200' : 'animate-delay-300'}`}>
+          <h2 className="text-2xl font-medium text-primary">{section.heading}</h2>
+          <div className="space-y-5">
             {section.roles.map((role) => (
-              <article key={role.title} className="rounded-2xl border border-slate-200/80 bg-white px-6 py-5 shadow-subtle">
-                <div className="flex flex-wrap items-baseline gap-2">
-                  <h3 className="text-base font-medium text-primary">{role.title}</h3>
-                  <span className="text-xs uppercase tracking-[0.35em] text-slateInk/60">{role.timeframe}</span>
+              <article key={role.title} className="rounded-lg border border-slate-200 bg-white px-8 py-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.01] hover:border-slate-300">
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <h3 className="text-lg font-medium text-primary">{role.title}</h3>
+                  <span className="text-sm uppercase tracking-widest text-slateInk/50">{role.timeframe}</span>
                 </div>
-                <ul className="mt-3 space-y-1 text-sm text-slateInk/80">
+                <ul className="mt-4 space-y-2 text-base text-slateInk/75 leading-relaxed">
                   {role.details.map((detail) => (
                     <li key={detail}>{detail}</li>
                   ))}

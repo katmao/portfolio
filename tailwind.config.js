@@ -11,7 +11,7 @@ export default {
         slateInk: '#3c3f46',
       },
       fontFamily: {
-        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        sans: ['"EB Garamond"', 'Georgia', 'serif'],
       },
       maxWidth: {
         proseWide: '60rem',
