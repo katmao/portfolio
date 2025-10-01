@@ -1,0 +1,19 @@
+<svg width="480" height="600" viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder of Ekaterina Novozhilova</title>
+  <desc id="desc">Abstract illustration suggesting a professional portrait with soft gradients.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb" />
+      <stop offset="100%" stop-color="#dbe2ff" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f5dff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#742fff" stop-opacity="0.55" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="32" fill="url(#bg)" />
+  <circle cx="240" cy="210" r="120" fill="#fff" />
+  <path d="M150 470c28-74 88-110 150-110s122 36 150 110" fill="#fff" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <circle cx="240" cy="210" r="88" fill="url(#accent)" opacity="0.3" />
+  <text x="50%" y="225" text-anchor="middle" font-family="'Inter', sans-serif" font-size="72" font-weight="600" fill="#2f5dff">EN</text>
+</svg>
