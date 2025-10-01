@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.ekaterina-novozhilova.com/(.*)",
+      "destination": "https://ekaterina-novozhilova.com/$1",
+      "permanent": true
+    }
+  ]
+}
