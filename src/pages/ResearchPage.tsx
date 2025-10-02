@@ -10,7 +10,7 @@ type ResearchArea = {
 
 const researchAreas: ResearchArea[] = [
   {
-    title: 'New Approaches to Study AI Perceptions',
+    title: 'Public Perceptions and Normative Attitudes Toward AI',
     description:
       'My work examines how people understand and evaluate the increasingly human-like capabilities of AI systems. Whereas much current scholarship takes a technology-centered approach that focuses on refining systems for narrow tasks, I emphasize the broader societal implications of AI. In particular, I study how ontological beliefs and normative attitudes shape adoption, trust, and regulation. This research highlights important contrasts between earlier information and communication technologies and today’s AI, showing how issues of autonomy, fairness, and control fuel public anxieties about societal change.',
     imageSrc: '/images/ChatGPT Image Oct 1, 2025 at 02_38_09 PM.png',
@@ -96,31 +96,35 @@ const researchAreas: ResearchArea[] = [
 const ResearchPage = () => (
   <div className="px-4 sm:px-6">
     <div className="mx-auto max-w-proseWide py-12 sm:py-16 lg:py-20 space-y-12 sm:space-y-16">
-      {researchAreas.map((area, idx) => (
+      {researchAreas.map((area, idx) => {
+        const isSecond = idx === 1;
+        return (
         <article
           key={area.title}
           className={`space-y-4 sm:space-y-6 rounded-lg border border-slate-200 bg-white px-4 py-6 sm:px-8 sm:py-8 shadow-sm animate-fade-in-slow transition-all duration-500 hover:shadow-lg hover:scale-[1.01] hover:border-slate-300 ${
             idx === 0 ? '' : idx === 1 ? 'animate-delay-200' : 'animate-delay-400'
           }`}
         >
-          <div className={`grid gap-4 sm:gap-6 lg:items-start ${idx === 1 ? 'lg:grid-cols-[1fr_auto]' : 'lg:grid-cols-[auto_1fr]'}`}>
-            {idx === 1 ? (
-              <>
-                <div className="space-y-3 sm:space-y-5">
-                  <h2 className="text-2xl sm:text-3xl font-medium text-primary leading-tight">{area.title}</h2>
-                  <p className="text-base sm:text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
-                </div>
-                <img src={area.imageSrc} alt={area.imageAlt} className="h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48 rounded object-cover transition-transform duration-500 hover:scale-105 mx-auto lg:mx-0" />
-              </>
-            ) : (
-              <>
-                <img src={area.imageSrc} alt={area.imageAlt} className="h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48 rounded object-cover transition-transform duration-500 hover:scale-105 mx-auto lg:mx-0" />
-                <div className="space-y-3 sm:space-y-5">
-                  <h2 className="text-2xl sm:text-3xl font-medium text-primary leading-tight">{area.title}</h2>
-                  <p className="text-base sm:text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
-                </div>
-              </>
-            )}
+          <div
+            className={`grid gap-4 sm:gap-6 lg:items-start ${
+              isSecond ? 'lg:grid-cols-[1fr_auto]' : 'lg:grid-cols-[auto_1fr]'
+            }`}
+          >
+            <img
+              src={area.imageSrc}
+              alt={area.imageAlt}
+              className={`h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48 rounded object-cover transition-transform duration-500 hover:scale-105 mx-auto lg:mx-0 ${
+                isSecond ? 'order-1 lg:order-2' : ''
+              }`}
+            />
+            <div
+              className={`space-y-3 sm:space-y-5 ${
+                isSecond ? 'order-2 lg:order-1' : ''
+              }`}
+            >
+              <h2 className="text-2xl sm:text-3xl font-medium text-primary leading-tight">{area.title}</h2>
+              <p className="text-base sm:text-lg text-slateInk/75 leading-relaxed">{area.description}</p>
+            </div>
           </div>
           <div className="border-t border-slate-200 pt-4 sm:pt-6">
             <h3 className="text-xs sm:text-sm font-medium uppercase tracking-widest text-slateInk/50">Selected Works</h3>
@@ -144,7 +148,8 @@ const ResearchPage = () => (
             </ul>
           </div>
         </article>
-      ))}
+        );
+      })}
     </div>
   </div>
 );

@@ -7,7 +7,7 @@ const focusItems = [...focusTopics, 'AI social implications'];
 const Hero = () => (
   <section id="top" aria-labelledby="hero-heading" className="px-4 sm:px-6">
     <div className="mx-auto flex max-w-proseWide flex-col gap-8 pt-6 sm:gap-12 sm:pt-8 lg:gap-16 lg:pt-12 lg:flex-row lg:items-start">
-      <div className="flex-1 space-y-6 sm:space-y-8 lg:flex lg:flex-col lg:justify-between lg:min-h-[600px]">
+      <div className="order-2 flex-1 space-y-6 sm:space-y-8 lg:order-1 lg:flex lg:flex-col lg:justify-between lg:min-h-[600px]">
         <h1
           id="hero-heading"
           className="text-4xl font-medium leading-tight text-primary sm:text-5xl lg:text-6xl animate-fade-in"
@@ -62,8 +62,8 @@ const Hero = () => (
           </a>
         </div>
       </div>
-      <aside className="flex w-full max-w-md flex-col gap-4 sm:gap-6 border-t border-slate-200 pt-6 sm:pt-8 lg:sticky lg:top-32 lg:w-80 lg:border-none lg:pt-0 lg:min-h-[600px] lg:justify-start">
-        <figure className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm animate-fade-in animate-delay-200 transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
+      <aside className="order-1 flex w-full max-w-md flex-col gap-4 border-t border-slate-200 pt-6 sm:gap-6 sm:pt-8 lg:order-2 lg:sticky lg:top-32 lg:w-80 lg:border-none lg:pt-0 lg:min-h-[600px] lg:justify-start">
+        <figure className="mx-auto w-40 sm:w-48 lg:w-full rounded-lg border border-slate-200 bg-white p-2 shadow-sm animate-fade-in animate-delay-200 transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
           <img
             src="/images/1Q0A7791.jpeg"
             alt="Portrait of Ekaterina Novozhilova"
